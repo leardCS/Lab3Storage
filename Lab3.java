@@ -45,26 +45,26 @@ public class Lab3 {
 		String[] sortedArr = sorted.toArray(new String[sorted.size()]);
 		
 		//Alphabetizing artists from A-Z with numbers and special characters appearing first
-			for(int i=0; i<120; i++) {
-				for(int y=1; y<120; y++) {
-					if(sortedArr[i].compareToIgnoreCase(sortedArr[y])<0) {
-						temp2 = sortedArr[i];
-						sortedArr[i] = sortedArr[y];
-						sortedArr[y] = temp2;
+		for(int i=0; i<120; i++) {
+			for(int y=1; y<120; y++) {
+				if(sortedArr[i].compareToIgnoreCase(sortedArr[y])<0) {
+					temp2 = sortedArr[i];
+					sortedArr[i] = sortedArr[y];
+					sortedArr[y] = temp2;
 					}
 				}
 			}
 			
-			//Special case of moving an artist with a last index standing in terms of alphabet from the first index
-			for(int e=0; e<3; e++) {
-				temp3 = sortedArr[0];
-				for(int i=0; i<119; i++) {
-		    		temp2 = sortedArr[i];
-		    		sortedArr[i] = sortedArr[i+1];
-		    		sortedArr[i+1] = temp2;
-		    		}
-				sortedArr[119] = temp3;
-				}
+		//Special case of moving an artist with a last index standing in terms of alphabet from the first index
+		for(int e=0; e<3; e++) {
+			temp3 = sortedArr[0];
+			for(int i=0; i<119; i++) {
+		    	temp2 = sortedArr[i];
+		    	sortedArr[i] = sortedArr[i+1];
+		    	sortedArr[i+1] = temp2;
+		    	}
+			sortedArr[119] = temp3;
+			}
 
 		//Counting how many times an artist appears on the Top 200, not including features
 		for(int i=0; i<120; i++) {
