@@ -76,8 +76,8 @@ public class Lab3 {
 		//Writing data to .txt file
 	    try {
 	        FileWriter Output = new FileWriter("Report.txt");
-	        Output.write("Weekly Report of Top 200 Artists in the United States (alphabetized A-Z with special characters & numbers last) - 10/05/2020\n" 
-	        			+"----------------------------------------------------------------------------------------------------------------------------\n");
+	        Output.write("Weekly Report of Top 200 Artists in the United States (alphabetized A-Z with special characters & numbers last) - Week of 10/01/2020\n" 
+	        			+"------------------------------------------------------------------------------------------------------------------------------------\n");
 	        for(int i=0; i<sortedArr.length; i++) {
 	        	Output.write(sortedArr[i] + " appears " + counter[i] + " time(s) on the Top 200\n");
 	        }
